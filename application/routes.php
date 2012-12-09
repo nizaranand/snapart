@@ -6,8 +6,11 @@
 |--------------------------------------------------------------------------
 */
 
-Route::get('/', array('uses'));
+Route::get('/', array('uses'=>'home@index'));
 
+#Users Controller Routes
+Route::get('join', array('uses'=>'users@index'));
+Route::post('users/validation_registration', array('as'=>'users/validation_registration', 'uses'=>'users@validation_registration'));
 /*
 |--------------------------------------------------------------------------
 | Application 404 & 500 Error Handlers
