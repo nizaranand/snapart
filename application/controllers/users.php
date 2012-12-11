@@ -3,11 +3,11 @@
 class Users_Controller extends Base_Controller{
 	public $restful = true;
 
-	public function get_index(){
-		return View::make('users.index');
+	public function get_signup(){
+		return View::make('users.signup');
 	}
 
-	public function post_validation_registration(){
+	public function post_validate_registration(){
 		$username = Input::get('username');
 		$email_address = Input::get('email_address');
 		$retype_email = Input::get('retype_email_address');
@@ -23,7 +23,6 @@ class Users_Controller extends Base_Controller{
 		Auth::login($user_id);
 		return Redirect::to('/?msg=success');
 	}
-
 }
 
 ?>
