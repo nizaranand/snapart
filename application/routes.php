@@ -8,9 +8,15 @@
 
 Route::get('/', array('uses'=>'home@index'));
 #Users Route Controllers
-Route::get('/join', array('uses'=>'users@signup'));
-
+Route::get('/join', array('uses'=>'users@signup', 'before'=>'auth'));
+Route::get('/login', array('uses'=>'users@login', 'before'=>'auth'));
+Route::get('/logout', array('uses'=>'users@logout'));
 Route::post('users/validate_registration', array('as'=>'users/validate_registration', 'uses'=>'users@validate_registration'));
+Route::post('users/validate_login', array('as'=>'users/validate_login', 'uses'=>'users@validate_login'));
+
+#Profile Routes
+Route::get('(:any)', array('as'=>'(:any)', 'uses'=>'profile@index'));
+Route::get('(:any)/gallery', array('as'=>'(:any)/gallery', 'uses'=>'profile@gallery'));
 /*
 |--------------------------------------------------------------------------
 | Application 404 & 500 Error Handlers
@@ -81,5 +87,5 @@ Route::filter('csrf', function()
 
 Route::filter('auth', function()
 {
-	if (Auth::guest()) return Redirect::to('login');
+	if (Auth::user()) return Redirect::to('/');
 });

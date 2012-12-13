@@ -72,13 +72,11 @@
       </div>
     </div>
 
-    @yield('sub_header')
-
     <div id="main_body_container" class="container">
       @yield('content')
       <hr>
       <footer>
-        &copy; <?php echo date('Y');?> snap<span class="make_it_red">Art</span></a>. All rights reserved
+        &copy; <?php echo date('Y');?> snap<span class="make_it_red">Art</span> for FREE!</a>. All rights reserved
       </footer>
     </div>
     {{ Asset::scripts() }}
