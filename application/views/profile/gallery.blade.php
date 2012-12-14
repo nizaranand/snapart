@@ -4,10 +4,10 @@
 <style>
 #profile_header_holder{
 	width: 100%;
-	margin-top: 30px;
+	margin-top: 35px;
 }
 #profile_header_menu{
-	width: 960px;
+	width: 940px;
 	margin: auto;
 }
 #profile_header_menu ul{
@@ -51,6 +51,7 @@
 }
 .header_profile_menu:hover a{
 	text-decoration: none;
+	color: #333333;
 }
 .header_profile_menu:hover{
 	border-bottom: 3px solid #982522;
@@ -66,7 +67,7 @@
 	padding: 10px 5px;
 }
 #profile_submenu_holder{
-	width: 960px;
+	width: 930px;
 	margin: auto;
 }
 </style>

@@ -4,7 +4,7 @@
 <style>
 #profile_header_holder{
 	width: 100%;
-	margin-top: 30px;
+	margin-top: 35px;
 }
 #profile_header_menu{
 	width: 940px;
@@ -51,6 +51,7 @@
 }
 .header_profile_menu:hover a{
 	text-decoration: none;
+	color: #333333;
 }
 .header_profile_menu:hover{
 	border-bottom: 3px solid #982522;

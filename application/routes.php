@@ -17,6 +17,10 @@ Route::post('users/validate_login', array('as'=>'users/validate_login', 'uses'=>
 #Profile Routes
 Route::get('(:any)', array('as'=>'(:any)', 'uses'=>'profile@index'));
 Route::get('(:any)/gallery', array('as'=>'(:any)/gallery', 'uses'=>'profile@gallery'));
+
+#Starters Route
+Route::get('starters', array('uses'=>'starters@index'));
+Route::get('starters/aboutme', array('uses'=>'starters@aboutme'));
 /*
 |--------------------------------------------------------------------------
 | Application 404 & 500 Error Handlers
